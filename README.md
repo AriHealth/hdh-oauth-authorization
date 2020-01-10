@@ -19,10 +19,11 @@ Health Data Hub OAuth 2.0 Authorization server for testing to provide SMART on F
 - Spring Security
 - Spring OAuth
 - Lombok for the models
+- Swagger for the description of the API
 
 ## Functionalities
 
-- Add two numbers without verification
+- Provide OAuth 2.0 functionalities
 
 ## How to deploy
 
@@ -50,6 +51,13 @@ Go to your browser and type http://localhost:8085/swagger-ui.html
 
     LOGGING_FOLDER=
     LOGGING_MODE=
+    JWT_SIGNING_KEY=
+    CLIENT_ID=
+    CLIENT_SECRET=
+    TOKEN_VALIDITY_ACCESS=
+    TOKEN_VALIDITY_REFRESH=
+    VALID_URIS=
+    AUTHORIZED_GRANT_TYPES=
 
 ## Docker deployment
 
@@ -70,6 +78,11 @@ Logging can be also configured using `LOGGING_FOLDER` and sharing a volume (this
 ```
 docker run --name hdh-oauth-authorization -d -v /tmp/log/hdh-oauth-authorization:/log/hdh-oauth-authorization -e LOGGING_FOLDER=/log/test -e LOGGING_MODE=dev health/hdh-oauth-authorization
 ```
+
+## External Resources
+
+- [Spring OAuth 2.0 Server with JWT tokens](https://picodotdev.github.io/blog-bitix/2019/02/servidor-oauth-gateway-y-servicio-rest-utilizando-tokens-jwt-con-spring/)
+- [Using Spring Boot for OAuth2 and JWT REST Protection](https://www.toptal.com/spring/spring-boot-oauth2-jwt-rest-protection) 
 
 ## License
 
