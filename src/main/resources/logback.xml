@@ -2,7 +2,7 @@
 <!DOCTYPE xml>
 <configuration>
 	<property name="LOG_DIR" value="${LOGGING_FOLDER:-logs}" />
-	<property name="LOG_FILE" value="auth" />
+	<property name="LOG_FILE" value="hdh-oauth-authorization" />
 
 	<appender name="STDOUT"
 		class="ch.qos.logback.core.ConsoleAppender">
