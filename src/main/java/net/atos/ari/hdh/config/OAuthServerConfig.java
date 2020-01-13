@@ -65,13 +65,12 @@ public class OAuthServerConfig extends AuthorizationServerConfigurerAdapter {
     @Value("${oauth2.valid-uris}") 
     private String[] validUris;
     
+    @Value("${oauth2.scopes}") 
+    private String[] scopes;
+
     private static final String PERMIT_ALL = "permitAll()";
     private static final String IS_AUTHENTICATED = "isAuthenticated()";
     
-
-    @Value("${oauth2.scopes:read,write}") 
-    private String[] scopes;
-
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;

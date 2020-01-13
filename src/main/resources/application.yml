@@ -14,6 +14,7 @@ oauth2:
       refresh: ${TOKEN_VALIDITY_REFRESH:2592000}
   valid-uris: ${VALID_URIS:http://localhost:8082/webjars/springfox-swagger-ui/oauth2-redirect.html,http://localhost:8088/spring-security-oauth-resource/webjars/springfox-swagger-ui/oauth2-redirect.html}
   authorized-grant-types: ${AUTHORIZED_GRANT_TYPES:password,authorization_code,refresh_token,client_credentials}
+  scopes: ${SCOPES:read,write,launch}
   
 spring:
   profiles:
